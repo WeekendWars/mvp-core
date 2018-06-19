@@ -6,7 +6,7 @@ android {
 
 
     defaultConfig {
-        applicationId "core.mvp.weekendwars.android.com.sampleapp"
+        applicationId "core.mvp.sampleapp"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1

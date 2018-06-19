@@ -3,8 +3,8 @@ package core.mvp.weekendwars.android.com;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import core.mvp.weekendwars.android.com.activities.AbstractActivity;
-import core.mvp.weekendwars.android.com.presenters.AbstractPresenter;
+import core.mvp.activities.AbstractActivity;
+import core.mvp.presenters.AbstractPresenter;
 import io.reactivex.functions.Consumer;
 import io.reactivex.internal.observers.ConsumerSingleObserver;
 
