@@ -1,10 +1,10 @@
-package core.mvp.weekendwars.android.com.activities;
+package core.mvp.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import core.mvp.weekendwars.android.com.presenters.AbstractPresenter;
-import core.mvp.weekendwars.android.com.views.AbstractView;
+import core.mvp.presenters.AbstractPresenter;
+import core.mvp.views.AbstractView;
 
 public abstract class AbstractActivity<V extends AbstractView, P extends AbstractPresenter<V>>
         extends AppCompatActivity implements AbstractView {

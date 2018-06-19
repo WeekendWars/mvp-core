@@ -1,11 +1,12 @@
-package core.mvp.weekendwars.android.com.sampleapp.activities;
+package core.mvp.sampleapp.activities;
 
 import android.widget.Toast;
 
-import core.mvp.weekendwars.android.com.activities.AbstractActivity;
-import core.mvp.weekendwars.android.com.sampleapp.R;
-import core.mvp.weekendwars.android.com.sampleapp.presenters.TestPresenter;
-import core.mvp.weekendwars.android.com.sampleapp.views.TestView;
+import core.mvp.activities.AbstractActivity;
+import core.mvp.sampleapp.R;
+import core.mvp.sampleapp.presenters.TestPresenter;
+import core.mvp.sampleapp.views.TestView;
+
 
 public class TestActivity extends AbstractActivity<TestView, TestPresenter> implements TestView {
 
