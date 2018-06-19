@@ -1,11 +1,11 @@
-package core.mvp.weekendwars.android.com.sampleapp.presenters;
+package core.mvp.sampleapp.presenters;
 
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
 
-import core.mvp.weekendwars.android.com.presenters.AbstractPresenter;
-import core.mvp.weekendwars.android.com.sampleapp.views.TestView;
+import core.mvp.presenters.AbstractPresenter;
+import core.mvp.sampleapp.views.TestView;
 
 public class TestPresenter extends AbstractPresenter<TestView> {
 
