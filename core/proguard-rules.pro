@@ -29,7 +29,9 @@
     @retrofit2.http.* <methods>;
 }
 
--keep core.mvp.*
+-keep public class core.mvp.activities.AbstractActivity {*;}
+-keep public class core.mvp.presenters.AbstractPresenter {*;}
+-keep public class core.mvp.views.AbstractView {*;}
 
 # Ignore annotation used for build tooling.
 -dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
