@@ -29,6 +29,8 @@
     @retrofit2.http.* <methods>;
 }
 
+-keep core.mvp.*
+
 # Ignore annotation used for build tooling.
 -dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
 
