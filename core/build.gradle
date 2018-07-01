@@ -24,6 +24,8 @@ android {
             debuggable true
         }
     }
+
+    resourcePrefix 'core_mvp_'
 }
 
 dependencies {

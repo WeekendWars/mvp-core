@@ -49,7 +49,7 @@ public abstract class AbstractActivity<V extends AbstractView, P extends Abstrac
         mPresenter.restoreState(savedInstanceState.getBundle(STATE_KEY));
     }
 
-    protected P getPresenter() {
+    protected final P getPresenter() {
         return mPresenter;
     }
 }

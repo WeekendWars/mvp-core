@@ -10,4 +10,12 @@
         android:layout_height="wrap_content"
         android:text="Displays a Toast when Activity restores state" />
 
+
+    <Button
+        android:onClick="goToFragmentsActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Go to Fragment's sample Activity" />
+
 </LinearLayout>
