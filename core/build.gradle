@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply from: 'maven-push.gradle'
 apply plugin: 'com.monits.staticCodeAnalysis'
+apply plugin: 'com.getkeepsafe.dexcount'
 apply plugin: 'jacoco'
 
 jacoco {
