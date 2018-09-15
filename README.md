@@ -59,7 +59,24 @@ You should save your `Presenter`'s state by overriding the `getBundle()` method 
 
 When the `Activity`'s no longer in the foreground notifies the `Presenter` the view's been detached. So it disposes any queued `Disposable` for avoiding listening events when the view's no longer visible.
 
+## Handle Disposables
 
+When the view's been attached the `Presenter` creates a new instance of `CompositeDisposable` which will be disposed on view's detachment. For adding new disposables being handled by view's lifecycle you should call the `AbstractPresenter.addDisposable()` method like showed below:
+
+```
+    addDisposable(YourModel.INSTANCE.getData().observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Consumer<EventsData>() {
+                    @Override
+                    public void accept(final YourDTO data) throws Exception {
+                        getView().render(data);
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(@NonNull final Throwable t) {
+                        handleError(t);
+                    }
+                }));
+```
 ## Implementation
 * Your `Activity` should extend `AbstractActivity<T, V>` and implement it's view `T` like showed below:
 
