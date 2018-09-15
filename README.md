@@ -1,11 +1,16 @@
 # mvp-core
 
-This is a simple and small library for setting up a basic MVP structure
+This is a simple and small library for setting up a basic MVP structure. It also includes <a href="https://square.github.io/retrofit/">Retrofit</a> and <a href="https://github.com/ReactiveX/RxJava"> RxJava </a>
 
 
 ## Features
 * Basic MVP structure for `Activity` and `Fragment`
 * State saving/restoring for `Presenter`
+
+## Includes
+* com.android.support:appcompat-v7:27.1.1
+* com.squareup.retrofit2:retrofit:2.4.0
+* com.squareup.retrofit2:adapter-rxjava2:2.4.0
 
 ## Library information
 * Total methods in core-release.aar: 58 (0,09% used)
@@ -49,6 +54,10 @@ You should save your `Presenter`'s state by overriding the `getBundle()` method 
         return state;
     }
 ```
+
+## View's detachment
+
+When the `Activity`'s no longer in the foreground notifies the `Presenter` the view's been detached. So it disposes any queued `Disposable` for avoiding listening events when the view's no longer visible.
 
 
 ## Implementation
