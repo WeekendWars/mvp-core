@@ -1,7 +1,6 @@
 package com.weekendwars.core.mvp;
 
 import com.weekendwars.core.mvp.activities.AbstractActivity;
-import com.weekendwars.core.mvp.fragments.AbstractFragment;
 import com.weekendwars.core.mvp.presenters.AbstractPresenter;
 
 import org.junit.Test;
@@ -21,58 +20,57 @@ import static org.junit.Assert.assertTrue;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class MVPUnitTest {
-
-    @SuppressWarnings({"unchecked", "ConstantConditions"})
+    @SuppressWarnings({"unchecked", "ConstantConditions", "CPD-START"})
     @Test
     public void testActivityLifeCycle() {
         final AbstractPresenter presenter = Mockito.spy(AbstractPresenter.class);
-        assertNull(presenter.getDisposable());
+        assertNull("Disposable should be null", presenter.getDisposable());
 
         presenter.attachView(Mockito.spy(AbstractActivity.class));
-        assertNotNull(presenter.getDisposable());
+        assertNotNull("Disposable shouldn't be null", presenter.getDisposable());
 
         presenter.addDisposable(new ConsumerSingleObserver<>(new Consumer<Object>() {
             @Override
-            public void accept(final Object o) throws Exception {
-
+            public void accept(final Object o) {
+                // Nothing to do
             }
         }, new Consumer<Throwable>() {
             @Override
-            public void accept(final Throwable throwable) throws Exception {
-
+            public void accept(final Throwable throwable) {
+                // Nothing to do
             }
         }));
 
-        assertTrue(presenter.hasSubscriptions());
+        assertTrue("Presenter should have subscription", presenter.hasSubscriptions());
 
         presenter.detachView();
-        assertFalse(presenter.hasSubscriptions());
+        assertFalse("Presenter should not have subscription", presenter.hasSubscriptions());
     }
 
-    @SuppressWarnings({"unchecked", "ConstantConditions"})
+    @SuppressWarnings({"unchecked", "ConstantConditions", "CPD-END"})
     @Test
     public void testFragmentLifeCycle() {
         final AbstractPresenter presenter = Mockito.spy(AbstractPresenter.class);
-        assertNull(presenter.getDisposable());
+        assertNull("Disposable should be null", presenter.getDisposable());
 
-        presenter.attachView(Mockito.spy(AbstractFragment.class));
-        assertNotNull(presenter.getDisposable());
+        presenter.attachView(Mockito.spy(AbstractActivity.class));
+        assertNotNull("Disposable shouldn't be null", presenter.getDisposable());
 
         presenter.addDisposable(new ConsumerSingleObserver<>(new Consumer<Object>() {
             @Override
-            public void accept(final Object o) throws Exception {
-
+            public void accept(final Object o) {
+                // Nothing to do
             }
         }, new Consumer<Throwable>() {
             @Override
-            public void accept(final Throwable throwable) throws Exception {
-
+            public void accept(final Throwable throwable) {
+                // Nothing to do
             }
         }));
 
-        assertTrue(presenter.hasSubscriptions());
+        assertTrue("Presenter should have subscription", presenter.hasSubscriptions());
 
         presenter.detachView();
-        assertFalse(presenter.hasSubscriptions());
+        assertFalse("Presenter should not have subscription", presenter.hasSubscriptions());
     }
 }

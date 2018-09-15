@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply from: 'maven-push.gradle'
+apply plugin: 'com.monits.staticCodeAnalysis'
 
 android {
     compileSdkVersion 27
@@ -28,7 +29,17 @@ android {
     resourcePrefix 'core_mvp_'
 }
 
+staticCodeAnalysis {
+    findbugs = true
+    checkstyle = true
+    pmd = true
+    cpd = true
+    androidLint = true
+    ignoreErrors = false
+}
+
 dependencies {
+    //androidLint 'com.monits:android-linters:1.3.0'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
     implementation "com.squareup.retrofit2:retrofit:$retrofitLibraryVersion"
