@@ -9,7 +9,7 @@ import com.weekendwars.core.mvp.views.AbstractView;
 public abstract class AbstractActivity<V extends AbstractView, P extends AbstractPresenter<V>>
         extends AppCompatActivity implements AbstractView {
 
-    private static final String STATE_KEY = "state-key";
+    private static final String STATE_KEY = "state-key-" + AbstractActivity.class.getCanonicalName();
     private P mPresenter;
 
     @Override
