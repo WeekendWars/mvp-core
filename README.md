@@ -78,6 +78,8 @@ When the view's been attached the `Presenter` creates a new instance of `Composi
 ```
 ## Implementation
 
+Add the dependency to your **build.gradle** like showed below:
+
 `implementation('com.github.weekendwars:core-mvp:1.0.0')`
 
 * Your `Activity` should extend `AbstractActivity<T, V>` and implement it's view `T` like showed below:
