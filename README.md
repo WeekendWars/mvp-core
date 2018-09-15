@@ -24,7 +24,7 @@ This is a simple and small library for setting up a basic MVP structure. It also
 Your `Activity` will notify the `Presenter` when it's been attached so the `Presenter` knows when to start doing whatever it
 needs to do. It will receive a reference to the `Activity`'s view on the `attachView(V)` method like showed below:
 
-```
+```java
     @Override
     public void attachView(@NonNull final TestView view) {
         super.attachView(view);
@@ -43,7 +43,7 @@ needed to be restored.
 
 You should save your `Presenter`'s state by overriding the `getBundle()` method and saving it's current state like showed below:
 
-```
+```java
     @NonNull
     @Override
     public Bundle getState() {
@@ -62,9 +62,9 @@ When the `Activity`'s no longer in the foreground notifies the `Presenter` the v
 
 When the view's been attached the `Presenter` creates a new instance of `CompositeDisposable` which will be disposed on view's detachment. For adding new disposables being handled by view's lifecycle you should call the `AbstractPresenter.addDisposable()` method like showed below:
 
-```
+```java
     addDisposable(YourModel.INSTANCE.getData().observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io()).subscribe(new Consumer<EventsData>() {
+                .subscribeOn(Schedulers.io()).subscribe(new Consumer<YourDTO>() {
                     @Override
                     public void accept(final YourDTO data) throws Exception {
                         getView().render(data);
@@ -84,7 +84,7 @@ Add the dependency to your **build.gradle** like showed below:
 
 * Your `Activity` should extend `AbstractActivity<T, V>` and implement it's view `T` like showed below:
 
-```
+```java
 public class TestActivity extends AbstractActivity<TestView, TestPresenter> implements TestView {
 
     @Override
@@ -105,7 +105,7 @@ public class TestActivity extends AbstractActivity<TestView, TestPresenter> impl
 ```
 
 * Your presenter should extend `AbstractPresenter<V>` like showed below:
-```
+```java
 public class TestPresenter extends AbstractPresenter<TestView> {
 
     private static final String STATE = "state";
