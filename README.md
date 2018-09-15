@@ -2,7 +2,6 @@
 
 This is a simple and small library for setting up a basic MVP structure. It also includes <a href="https://square.github.io/retrofit/">Retrofit</a> and <a href="https://github.com/ReactiveX/RxJava"> RxJava </a>
 
-
 ## Features
 * Basic MVP structure for `Activity` and `Fragment`
 * State saving/restoring for `Presenter`
@@ -78,6 +77,9 @@ When the view's been attached the `Presenter` creates a new instance of `Composi
                 }));
 ```
 ## Implementation
+
+`implementation('com.github.weekendwars:core-mvp:1.0.0')`
+
 * Your `Activity` should extend `AbstractActivity<T, V>` and implement it's view `T` like showed below:
 
 ```
