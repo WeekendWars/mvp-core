@@ -9,6 +9,7 @@ import com.weekendwars.core.mvp.sampleapp.views.TestView;
 
 public class TestPresenter extends AbstractPresenter<TestView> {
 
+    private static final String STATE = "state";
     private long mState;
 
     @Override
@@ -19,14 +20,14 @@ public class TestPresenter extends AbstractPresenter<TestView> {
 
     @Override
     public void restoreState(@NonNull final Bundle savedState) {
-        mState = savedState.getLong("state");
+        mState = savedState.getLong(STATE);
     }
 
     @NonNull
     @Override
     public Bundle getState() {
         final Bundle state = new Bundle();
-        state.putLong("state", SystemClock.currentThreadTimeMillis());
+        state.putLong(STATE, SystemClock.currentThreadTimeMillis());
 
         return state;
     }
