@@ -27,10 +27,8 @@ jobs:
       - run:
           name: Run Checks
           command: ./gradlew check
-              
+
       - store_artifacts:
-          path: build/reports
-          destination: reports
-      - store_test_results:
-          path: build/test-results
+          path: ~/code/core/config
+          destination: /build/reports
       # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples
