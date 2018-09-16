@@ -27,8 +27,8 @@ public abstract class AbstractActivity<V extends AbstractView, P extends Abstrac
 
     @Override
     protected void onPause() {
-        super.onPause();
         mPresenter.detachView();
+        super.onPause();
     }
 
     protected abstract V getMvpView();
@@ -39,8 +39,8 @@ public abstract class AbstractActivity<V extends AbstractView, P extends Abstrac
 
     @Override
     protected void onSaveInstanceState(final Bundle outState) {
-        super.onSaveInstanceState(outState);
         outState.putBundle(STATE_KEY, mPresenter.getState());
+        super.onSaveInstanceState(outState);
     }
 
     @Override

@@ -44,6 +44,9 @@ public abstract class AbstractPresenter<V extends AbstractView> {
         }
     }
 
+    /**
+     * @return whether the presenter's queued subscriptions or not
+     */
     @VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
     public boolean hasSubscriptions() {
         return mDisposable.size() > 0;

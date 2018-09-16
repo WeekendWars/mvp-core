@@ -31,4 +31,11 @@ public class TestPresenter extends AbstractPresenter<TestView> {
 
         return state;
     }
+
+    @Override
+    public String toString() {
+        return "TestPresenter{"
+                + "mState=" + mState
+                + '}';
+    }
 }

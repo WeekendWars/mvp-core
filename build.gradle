@@ -9,11 +9,13 @@ buildscript {
             url 'https://maven.google.com/'
             name 'Google'
         }
+        maven {
+            url 'https://plugins.gradle.org/m2/'
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.4'
-        
-
+        classpath 'com.monits:static-code-analysis-plugin:2.6.8'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
