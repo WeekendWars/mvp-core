@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.monits.staticCodeAnalysis'
 
 android {
     compileSdkVersion 27
@@ -26,6 +27,15 @@ android {
     }
 
     resourcePrefix 'core_mvp_sampleapp_'
+}
+
+staticCodeAnalysis {
+    findbugs = true
+    checkstyle = true
+    pmd = true
+    cpd = true
+    androidLint = true
+    ignoreErrors = false
 }
 
 dependencies {
