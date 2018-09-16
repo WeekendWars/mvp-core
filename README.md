@@ -15,9 +15,6 @@ This is a simple and small library for setting up a basic MVP structure. It also
 * Total methods in core-release.aar: 58 (0,09% used)
 * Total fields in core-release.aar:  6 (0,01% used)
 * Total classes in core-release.aar:  11 (0,02% used)
-* Methods remaining in core-release.aar: 65477
-* Fields remaining in core-release.aar:  65529
-* Classes remaining in core-release.aar:  65524
 
 ## View's attachment
 
