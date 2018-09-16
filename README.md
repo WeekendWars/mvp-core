@@ -41,7 +41,7 @@ this method before the view's attachment, like on the presenter's constructor**.
 If your `Activity` has been destroyed it will call it's `onRestoreInstanceState()` and notify the `Presenter` there's a state
 needed to be restored.
 
-You should save your `Presenter`'s state by overriding the `getBundle()` method and saving it's current state like showed below:
+You should save your `Presenter`'s state by overriding the `getState()` method and saving it's current state like showed below:
 
 ```java
     @NonNull
@@ -66,7 +66,7 @@ When the view's been attached the `Presenter` creates a new instance of `Composi
     addDisposable(YourModel.INSTANCE.getData().observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Consumer<YourDTO>() {
                     @Override
-                    public void accept(final YourDTO data) throws Exception {
+                    public void accept(final YourDTO data) {
                         getView().render(data);
                     }
                 }, new Consumer<Throwable>() {
