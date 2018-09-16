@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.weekendwars.core.mvp.sampleapp.R;
 
-public class FragmentTestActivity extends AppCompatActivity{
+public class FragmentTestActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable final Bundle savedInstanceState) {
