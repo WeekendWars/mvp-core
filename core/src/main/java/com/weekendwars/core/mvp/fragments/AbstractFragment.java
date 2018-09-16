@@ -13,7 +13,7 @@ import com.weekendwars.core.mvp.views.AbstractView;
 public abstract class AbstractFragment<V extends AbstractView, P extends AbstractPresenter<V>>
         extends android.support.v4.app.Fragment implements AbstractView {
 
-    private static final String STATE_KEY = "state-key";
+    private static final String STATE_KEY = "state-key" + AbstractFragment.class.getCanonicalName();
     private P mPresenter;
 
     @Override
