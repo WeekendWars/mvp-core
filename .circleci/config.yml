@@ -10,20 +10,17 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "build.gradle" }}
 #      - run:
 #         name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
 #         command: sudo chmod +x ./gradlew
-      - run:
-          name: Gradlew Wrapper
-          command: ./gradlew wrapper
       - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
       - save_cache:
           paths:
             - ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "build.gradle" }}
       - run:
           name: Run Tests
           command: ./gradlew lint test
@@ -32,8 +29,8 @@ jobs:
           command: ./gradlew check
               
       - store_artifacts:
-          path: app/build/reports
+          path: build/reports
           destination: reports
       - store_test_results:
-          path: app/build/test-results
+          path: build/test-results
       # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples
