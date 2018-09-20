@@ -3,7 +3,6 @@ package com.weekendwars.core.mvp.presenters;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.annotation.VisibleForTesting;
 
 import com.weekendwars.core.mvp.views.AbstractView;
 
@@ -47,8 +46,7 @@ public abstract class AbstractPresenter<V extends AbstractView> {
     /**
      * @return whether the presenter's queued subscriptions or not
      */
-    @VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
-    public boolean hasSubscriptions() {
+    /* default */ boolean hasSubscriptions() {
         return mDisposable.size() > 0;
     }
 
@@ -65,16 +63,14 @@ public abstract class AbstractPresenter<V extends AbstractView> {
      *
      * @param disposable the disposable being queued
      */
-    @VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
-    public void addDisposable(@NonNull final Disposable disposable) {
+    /* default */ void addDisposable(@NonNull final Disposable disposable) {
         mDisposable.add(disposable);
     }
 
     /**
      * @return the compositeDisposable
      */
-    @VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
-    public CompositeDisposable getDisposable() {
+    /* default */ CompositeDisposable getDisposable() {
         return mDisposable;
     }
 

@@ -31,12 +31,6 @@ public abstract class AbstractActivity<V extends AbstractView, P extends Abstrac
         super.onPause();
     }
 
-    protected abstract V getMvpView();
-
-    protected abstract P createPresenter();
-
-    protected abstract int getLayoutResourceId();
-
     @Override
     protected void onSaveInstanceState(final Bundle outState) {
         outState.putBundle(STATE_KEY, mPresenter.getState());
@@ -48,6 +42,12 @@ public abstract class AbstractActivity<V extends AbstractView, P extends Abstrac
         super.onRestoreInstanceState(savedInstanceState);
         mPresenter.restoreState(savedInstanceState.getBundle(STATE_KEY));
     }
+
+    protected abstract V getMvpView();
+
+    protected abstract P createPresenter();
+
+    protected abstract int getLayoutResourceId();
 
     protected final P getPresenter() {
         return mPresenter;

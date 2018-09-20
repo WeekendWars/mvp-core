@@ -1,7 +1,6 @@
-package com.weekendwars.core.mvp;
+package com.weekendwars.core.mvp.presenters;
 
 import com.weekendwars.core.mvp.activities.AbstractActivity;
-import com.weekendwars.core.mvp.presenters.AbstractPresenter;
 
 import org.junit.Test;
 import org.mockito.Mockito;
