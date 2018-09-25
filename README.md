@@ -51,6 +51,15 @@ You should save your `Presenter`'s state by overriding the `getState()` method a
     }
 ```
 
+And restore it on the `restoreState()` method like showed below:
+
+```java
+    @Override
+    public void restoreState(@NonNull final Bundle savedState) {
+        mState = savedState.getLong(STATE);
+    }
+```
+
 ## View's detachment
 
 When the `Activity`'s no longer in the foreground notifies the `Presenter` the view's been detached. So it disposes any queued `Disposable` for avoiding listening events when the view's no longer visible.
