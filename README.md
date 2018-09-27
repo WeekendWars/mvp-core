@@ -88,7 +88,7 @@ Add the dependency to your **build.gradle** like showed below:
 
 `implementation('com.github.weekendwars:core-mvp:1.0.1')`
 
-* Your `Activity` should extend `AbstractActivity<T, V>` and implement it's view `T` like showed below:
+* Your `Activity` should extend `AbstractActivity<V, P>` and implement it's view `V` like showed below:
 
 ```java
 public class TestActivity extends AbstractActivity<TestView, TestPresenter> implements TestView {
