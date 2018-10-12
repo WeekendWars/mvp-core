@@ -12,7 +12,7 @@ This is a simple and small library for setting up a basic MVP architecture. It a
 * com.squareup.retrofit2:adapter-rxjava2:2.4.0
 
 ## Library information
-* Total methods in core-release.aar: 58 (0,09% used)
+* Total methods in core-release.aar: 59 (0,09% used)
 * Total fields in core-release.aar:  6 (0,01% used)
 * Total classes in core-release.aar:  11 (0,02% used)
 
