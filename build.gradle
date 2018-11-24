@@ -14,7 +14,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'com.android.tools.build:gradle:3.2.1'
         classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.8.3'
 
         classpath 'com.monits:static-code-analysis-plugin:2.6.8'
@@ -28,6 +28,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://jitpack.io" }
     }
 }
 

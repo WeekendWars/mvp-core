@@ -1,10 +1,14 @@
 package com.weekendwars.core.mvp.sampleapp.activities;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.Toast;
 
+import com.github.lzyzsd.circleprogress.ArcProgress;
 import com.weekendwars.core.mvp.activities.AbstractActivity;
 import com.weekendwars.core.mvp.sampleapp.R;
 import com.weekendwars.core.mvp.sampleapp.presenters.TestPresenter;
@@ -35,5 +39,16 @@ public class TestActivity extends AbstractActivity<TestView, TestPresenter> impl
 
     public void goToFragmentsActivity(@NonNull final View view) {
         startActivity(new Intent(this, FragmentTestActivity.class));
+    }
+
+    @Override
+    protected void onCreate(final Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        final ObjectAnimator animator = ObjectAnimator.ofInt(findViewById(R.id.arc_progress),
+                "progress", 0, 35);
+        animator.setInterpolator(new AccelerateDecelerateInterpolator());
+        animator.setDuration(1000);
+        animator.start();
     }
 }

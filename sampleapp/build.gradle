@@ -15,7 +15,7 @@ android {
 
     defaultConfig {
         applicationId "core.mvp.sampleapp"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -57,7 +57,10 @@ staticCodeAnalysis {
 dependencies {
     implementation project(':core')
     implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
-
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation "com.android.support:design:$supportLibraryVersion"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+    implementation 'com.github.lzyzsd:circleprogress:1.2.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     androidTestUtil 'com.android.support.test:orchestrator:1.0.2'

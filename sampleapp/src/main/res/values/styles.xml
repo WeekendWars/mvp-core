@@ -1,11 +1,10 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="core_mvp_sampleapp_AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="core_mvp_sampleapp_AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/core_mvp_sampleapp_colorPrimary</item>
         <item name="colorPrimaryDark">@color/core_mvp_sampleapp_colorPrimaryDark</item>
         <item name="colorAccent">@color/core_mvp_sampleapp_colorAccent</item>
     </style>
-
 </resources>
