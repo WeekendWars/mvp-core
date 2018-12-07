@@ -1,4 +1,4 @@
-# mvp-core [![CircleCI](https://circleci.com/gh/WeekendWars/mvp-core/tree/master.svg?style=svg)](https://circleci.com/gh/WeekendWars/mvp-core/tree/master)
+# mvp-core [![CircleCI](https://circleci.com/gh/WeekendWars/mvp-core/tree/master.svg?style=svg)](https://circleci.com/gh/WeekendWars/mvp-core/tree/master) [![codecov](https://codecov.io/gh/WeekendWars/mvp-core/branch/master/graph/badge.svg)](https://codecov.io/gh/WeekendWars/mvp-core)
 
 This is a simple and small library for setting up a basic MVP architecture. It also includes <a href="https://square.github.io/retrofit/">Retrofit</a> and <a href="https://github.com/ReactiveX/RxJava"> RxJava </a>
 
