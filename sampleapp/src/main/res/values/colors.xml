@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="core_mvp_sampleapp_colorPrimary">#3F51B5</color>
-    <color name="core_mvp_sampleapp_colorPrimaryDark">#283593</color>
-    <color name="core_mvp_sampleapp_colorAccent">#E91E63</color>
-    <color name="core_mvp_sampleapp_colorAccentDark">#AD1457</color>
+    <color name="core_mvp_sampleapp_colorPrimaryDark">#0277BD</color>
+    <color name="core_mvp_sampleapp_colorAccent">#03A9F4</color>
+    <color name="core_mvp_sampleapp_colorAccentDark">#0277BD</color>
+    <color name="core_mvp_sampleapp_fruits">#FF5252</color>
+    <color name="core_mvp_sampleapp_veggies">#FFB74D</color>
+    <color name="core_mvp_sampleapp_grains">#FFF176</color>
+    <color name="core_mvp_sampleapp_dairies">#FFD54F</color>
+    <color name="core_mvp_sampleapp_proteins">#FF8A65</color>
+    <color name="core_mvp_sampleapp_nuts">#A1887F</color>
+    <color name="core_mvp_sampleapp_sweets">#F06292</color>
+    <color name="core_mvp_sampleapp_drinks">#90A4AE</color>
 </resources>
