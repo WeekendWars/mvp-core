@@ -1,3 +1,8 @@
+# DEPRECATED
+I strongly recommend to use <a href="https://developer.android.com/topic/libraries/architecture/">Android Architecture Components</a> for dealing with lifecycle aware architecture.
+
+<hr/>
+
 # mvp-core [![CircleCI](https://circleci.com/gh/WeekendWars/mvp-core/tree/master.svg?style=svg)](https://circleci.com/gh/WeekendWars/mvp-core/tree/master) [![codecov](https://codecov.io/gh/WeekendWars/mvp-core/branch/master/graph/badge.svg)](https://codecov.io/gh/WeekendWars/mvp-core)
 
 This is a simple and small library for setting up a basic MVP architecture. It also includes <a href="https://square.github.io/retrofit/">Retrofit</a> and <a href="https://github.com/ReactiveX/RxJava"> RxJava </a>
